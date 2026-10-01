@@ -1,0 +1,12 @@
+{
+  "UIN1": {"query": "schermo oled", "field": "content"},
+  "UIN2": {"query": "snapdragon 8", "field": "content"},
+  "UIN3": {"query": "pieghevole", "field": "content"},
+  "UIN4": {"query": "Iphone 16 fotocamera frontale", "field": null},
+  "UIN5": {"query": "display 120Hz", "field": "content"},
+  "UIN6": {"query": "5G ricarica ultra rapida", "field": "content"},
+  "UIN7": {"query": "foto intelligenza artificiale", "field": "content"},
+  "UIN8": {"query": "Oneplus one", "field": null},
+  "UIN9": {"query": "Iphone pro", "field": null},
+  "UIN10": {"query": "Xiaomi", "field": "title"}
+}

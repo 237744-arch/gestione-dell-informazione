@@ -1,0 +1,109 @@
+DOCUMENTAZIONE DEL BENCHMARK – Progetto Gestione dell’Informazione - SmartSearch
+
+FASE 1) Definizione delle Query
+
+UIN 1: L'utente cerca uno smartphone che abbia lo schermo oled.
+Query: schermo oled
+-Testa la capacità del motore di intercettare termini tecnici generici all'interno del corpo del documento.
+
+UIN 2: L'utente cerca tutti i dispositivi che hanno il processore Snapdragon.
+Query: snapdragon 8
+-Testa il matching di token alfanumerici misti (parola + numero) per identificare componenti hardware specifici.
+
+UIN 3: L'utente cerca uno smartphone dal formato compatto o pieghevole.
+Query: pieghevole flip
+-Valuta come i motori gestiscono termini correlati o sinonimi nello stesso intento di ricerca.
+
+UIN 4: L'utente vuole vedere la risoluzione della fotocamera frontale dell'Iphone 16.
+Query: Iphone 16 fotocamera frontale
+-Query long-tail che verifica l'intersezione tra un modello specifico e una feature precisa.
+
+UIN 5: L'utente necessita di uno schermo molto fluido per il gaming.
+Query: display 120Hz
+-Verifica la gestione dei termini attaccati alle unità di misura (120Hz), critici per gli analizzatori lessicali.
+
+UIN 6: L'utente cerca un dispositivo con l'ultima connessione di rete e ricarica rapida.
+Query: 5G ricarica ultra rapida
+-Query composita che unisce una sigla tecnologica a un concetto discorsivo.
+
+UIN 7: L'utente è interessato alle capacità fotografiche potenziate dall'intelligenza artificiale.
+Query: foto intelligenza artificiale
+-Testa la ricerca di un concetto astratto applicato a una funzionalità del dispositivo.
+
+UIN 8: L'utente cerca informazioni specifiche per un modello esatto di Oneplus.
+Query: "Oneplus One"
+-Testa il matching esatto o la forte rilevanza di una frase specifica, evitando di recuperare tutti i modelli dell'azienda.
+
+UIN 9: L'utente vuole vedere tutti i top di gamma degli IPhone.
+Query: title: Iphone Pro
+-Ricerca mirata su un campo specifico. Istruisce il motore a cercare esclusivamente nel campo 'title'.
+
+UIN 10: L'utente sta filtrando il catalogo per vedere esclusivamente i dispositivi del marchio Xiaomi.
+Query: title:"Xiaomi"
+-Ricerca mirata sul field 'title' con un singolo termine identificativo del brand.
+
+FASE 2) Gold Standard
+
+Il Gold Standard (o ground truth) rappresenta la "verità assoluta" del nostro sistema di Information Retrieval. 
+È stato costruito eseguendo le 10 query di test (UIN) e valutando manualmente la pertinenza dei documenti restituiti. 
+
+Durante questa fase di valutazione sono stati scartati i "falsi positivi" (come le pagine Wikipedia enciclopediche delle aziende) 
+e sono stati mantenuti come "veri positivi" esclusivamente i modelli di smartphone pertinenti all'intento di ricerca.
+
+Di seguito la lista dei documenti rilevanti per ogni query:
+
+- UIN 1 (schermo oled): IPhone XS, IPhone 13, IPhone X, IPhone 14 Pro, IPhone 15 Pro, IPhone 14, IPhone 15, IPhone 16, IPhone 17, IPhone 12
+- UIN 2 (snapdragon 8): Xiaomi 12, Samsung Galaxy S22, Samsung Galaxy S26, OnePlus 11, OnePlus 10 Pro, Huawei P50
+- UIN 3 (pieghevole): Samsung Galaxy Z Flip, IPhone Duo, Samsung Galaxy Z Fold 3, Samsung Galaxy Z Fold 2, Samsung Galaxy Fold, Samsung Galaxy Z Flip 3
+- UIN 4 (Iphone 16 fotocamera frontale): IPhone 16
+- UIN 5 (display 120Hz): IPhone 17, Samsung Galaxy S20
+- UIN 6 (5G ricarica ultra rapida): Samsung Galaxy S20, Samsung Galaxy A73, Samsung Galaxy Note 10, Xiaomi 12, Samsung Galaxy Z Fold 3, Samsung Galaxy Z Fold 2
+- UIN 7 (foto intelligenza artificiale): Samsung Galaxy Note 20
+- UIN 8 (Oneplus one): OnePlus One
+- UIN 9 (Iphone pro): IPhone 13 Pro, IPhone 14 Pro, IPhone 17 Pro, IPhone 15 Pro, IPhone 18 Pro, IPhone 12 Pro, IPhone 11 Pro, IPhone 16 Pro
+- UIN 10 (Xiaomi): Xiaomi 12, Redmi Note 6 Pro, Redmi Note 10, Redmi Note 9, Redmi Note 11
+
+FASE 3) Esecuzione delle Query
+
+Al fine di confrontare le prestazioni dei diversi motori di ricerca, le 10 query definite (UIN) sono state processate in batch dai sistemi implementati. 
+Per ogni query, è stato imposto un limite di recupero (Top-K) pari ai primi 10 documenti classificati.
+
+Ogni query è stata eseguita in parallelo sui seguenti motori:
+* PostgreSQL (utilizzando il motore Full Text Search integrato con plainto_tsquery e classificazione tramite ts_rank_cd)
+* Whoosh (utilizzando il modello vettoriale TF-IDF e il modello Weighted/BM25)
+
+I risultati grezzi delle estrazioni, comprensivi dei punteggi di ranking assegnati dai rispettivi algoritmi per i top 10 documenti restituiti, 
+sono stati salvati strutturalmente all'interno del file "bench_save.json". Questo file funge da base dati per il successivo calcolo automatizzato delle metriche di valutazione.
+
+FASE 4) Calcolo delle Metriche di Performance (k = 5)
+
+Per valutare quantitativamente l'efficacia dei sistemi di recupero sui primi 5 risultati restituiti (k = 5), 
+sono state calcolate le seguenti metriche per ciascuna delle 10 query (UIN), previa deduplicazione dei documenti mantenendo l'ordine di ranking originale:
+
+* Precision@5: frazione di documenti rilevanti presenti nei primi 5 risultati restituiti.
+* Recall@5: frazione di documenti rilevanti recuperati nei primi 5 rispetto al totale dei rilevanti definiti nel Gold Standard.
+* F1@5: media armonica tra Precision@5 e Recall@5, che sintetizza l'equilibrio tra accuratezza e copertura.
+* Average Precision (AP): media delle precisioni calcolate a ogni posizione in cui viene recuperato un documento rilevante.
+* Mean Average Precision (MAP): media aritmetica delle AP su tutte le 10 query di test.
+
+==================================================
+RISULTATI FINALI BENCHMARK (k=5)
+==================================================
+
+Motore: PostgreSQL (ts_rank_cd)
+  Mean Precision@5 : 0.6000
+  Mean Recall@5    : 0.7658
+  Mean F1@5        : 0.5753
+  MAP (Mean Avg P) : 0.6444
+
+Motore: Whoosh (TF-IDF)
+  Mean Precision@5 : 0.3800
+  Mean Recall@5    : 0.4325
+  Mean F1@5        : 0.3562
+  MAP (Mean Avg P) : 0.4017
+
+Motore: Whoosh (BM25 / Weighted)
+  Mean Precision@5 : 0.4800
+  Mean Recall@5    : 0.6625
+  Mean F1@5        : 0.4644
+  MAP (Mean Avg P) : 0.6411

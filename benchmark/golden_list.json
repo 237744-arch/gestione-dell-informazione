@@ -1,0 +1,78 @@
+{
+  "UIN1": [
+    "IPhone XS",
+    "IPhone 13",
+    "IPhone X",
+    "IPhone 14 Pro",
+    "IPhone 15 Pro",
+    "IPhone 14",
+    "IPhone 15",
+    "IPhone 16",
+    "IPhone 17",
+    "IPhone 12"
+  ],
+
+  "UIN2": [
+    "Xiaomi 12",
+    "Samsung Galaxy S22",
+    "Samsung Galaxy S26",
+    "OnePlus 11",
+    "OnePlus 10 Pro",
+    "Huawei P50"
+  ],
+
+  "UIN3": [
+    "Samsung Galaxy Z Flip",
+    "IPhone Duo",
+    "Samsung Galaxy Z Fold 3",
+    "Samsung Galaxy Z Fold 2",
+    "Samsung Galaxy Fold",
+    "Samsung Galaxy Z Flip 3"
+  ],
+
+  "UIN4": [
+    "IPhone 16"
+  ],
+
+  "UIN5": [
+    "IPhone 17",
+    "Samsung Galaxy S20"
+  ],
+
+  "UIN6": [
+    "Samsung Galaxy S20",
+    "Samsung Galaxy A73",
+    "Samsung Galaxy Note 10",
+    "Xiaomi 12",
+    "Samsung Galaxy Z Fold 3",
+    "Samsung Galaxy Z Fold 2"
+  ],
+
+  "UIN7": [
+    "Samsung Galaxy Note 20"
+  ],
+
+  "UIN8": [
+    "OnePlus One"
+  ],
+
+  "UIN9": [
+    "IPhone 13 Pro",
+    "IPhone 14 Pro",
+    "IPhone 17 Pro",
+    "IPhone 15 Pro",
+    "IPhone 18 Pro",
+    "IPhone 12 Pro",
+    "IPhone 11 Pro",
+    "IPhone 16 Pro"
+   ],
+
+   "UIN10": [
+    "Xiaomi 12",
+    "Redmi Note 6 Pro",
+    "Redmi Note 10",
+    "Redmi Note 9",
+    "Redmi Note 11"
+   ]
+
+}

@@ -1,0 +1,306 @@
+{
+    "UIN1": {
+        "PostgreSQL": [
+            "IPhone XS",
+            "IPhone 13",
+            "IPhone X",
+            "IPhone 15",
+            "IPhone 14",
+            "IPhone 17",
+            "IPhone 13 Pro",
+            "IPhone 14 Pro",
+            "IPhone 15 Pro",
+            "IPhone 12"
+        ],
+        "Whoosh_TFIDF": [
+            "IPhone X",
+            "IPhone 15",
+            "IPhone 15",
+            "IPhone 14",
+            "IPhone 14",
+            "IPhone 13",
+            "IPhone 13",
+            "IPhone XS",
+            "IPhone XS",
+            "Realme"
+        ],
+        "Whoosh_Weighted": [
+            "IPhone 15",
+            "IPhone 15",
+            "IPhone XS",
+            "IPhone XS",
+            "IPhone 14",
+            "IPhone 14",
+            "IPhone 13",
+            "IPhone 13",
+            "IPhone 15 Pro",
+            "IPhone 15 Pro"
+        ]
+    },
+    "UIN2": {
+        "PostgreSQL": [
+            "Xiaomi 12",
+            "Samsung Galaxy S22",
+            "Samsung Galaxy S26",
+            "OnePlus 11",
+            "OnePlus 10 Pro",
+            "Sony Xperia",
+            "Realme",
+            "OnePlus",
+            "Redmi Note 10",
+            "Huawei P50"
+        ],
+        "Whoosh_TFIDF": [
+            "Realme",
+            "OnePlus",
+            "OnePlus",
+            "OnePlus",
+            "OnePlus",
+            "OnePlus",
+            "OnePlus",
+            "OnePlus",
+            "OnePlus",
+            "OnePlus"
+        ],
+        "Whoosh_Weighted": [
+            "Redmi Note 10",
+            "Redmi Note 10",
+            "Xiaomi 12",
+            "Xiaomi 12",
+            "Xiaomi",
+            "Xiaomi",
+            "Xiaomi",
+            "Xiaomi",
+            "Xiaomi",
+            "Xiaomi"
+        ]
+    },
+    "UIN3": {
+        "PostgreSQL": [
+            "Samsung Galaxy Z Flip",
+            "Samsung Galaxy Z Fold 3",
+            "Samsung Galaxy Z Fold 2",
+            "IPhone Duo",
+            "Samsung Galaxy Z Flip 3",
+            "Samsung Galaxy Fold"
+        ],
+        "Whoosh_TFIDF": [
+            "Samsung Galaxy Z Flip",
+            "Samsung Galaxy Z Flip",
+            "Samsung Galaxy Z Flip",
+            "Samsung Galaxy Z Flip",
+            "Samsung Galaxy Z Flip",
+            "IPhone Duo",
+            "Samsung Galaxy Z Fold 3",
+            "Samsung Galaxy Z Fold 3",
+            "Samsung Galaxy Z Fold 2",
+            "Samsung Galaxy Fold"
+        ],
+        "Whoosh_Weighted": [
+            "Samsung Galaxy Z Flip 3",
+            "Samsung Galaxy Z Flip 3",
+            "IPhone Duo",
+            "Samsung Galaxy Z Fold 3",
+            "Samsung Galaxy Z Fold 3",
+            "Samsung Galaxy Z Flip",
+            "Samsung Galaxy Z Flip",
+            "Samsung Galaxy Z Flip",
+            "Samsung Galaxy Z Flip",
+            "Samsung Galaxy Z Flip"
+        ]
+    },
+    "UIN4": {
+        "PostgreSQL": [
+            "IPhone 17",
+            "IPhone 16",
+            "OnePlus",
+            "IPhone X",
+            "IPhone 14",
+            "Samsung Galaxy S21"
+        ],
+        "Whoosh_TFIDF": [
+            "IPhone X",
+            "IPhone 14",
+            "IPhone 14",
+            "OnePlus",
+            "OnePlus",
+            "OnePlus",
+            "OnePlus",
+            "OnePlus",
+            "OnePlus",
+            "OnePlus"
+        ],
+        "Whoosh_Weighted": [
+            "IPhone 16",
+            "IPhone 16",
+            "IPhone 16",
+            "IPhone 17",
+            "IPhone 17",
+            "IPhone 17",
+            "IPhone 14",
+            "IPhone 14",
+            "IPhone X",
+            "OnePlus"
+        ]
+    },
+    "UIN5": {
+        "PostgreSQL": [
+            "IPhone 17",
+            "Samsung Galaxy S20"
+        ],
+        "Whoosh_TFIDF": [
+            "Samsung Galaxy S20",
+            "IPhone 17",
+            "IPhone 17",
+            "IPhone 17"
+        ],
+        "Whoosh_Weighted": [
+            "IPhone 17",
+            "IPhone 17",
+            "IPhone 17",
+            "Samsung Galaxy S20"
+        ]
+    },
+    "UIN6": {
+        "PostgreSQL": [
+            "Realme",
+            "Samsung Galaxy Z Fold 3",
+            "Samsung Galaxy Note 10",
+            "Samsung Galaxy A73",
+            "Samsung Galaxy Z Fold 2",
+            "Xiaomi 12",
+            "Samsung Galaxy S20"
+        ],
+        "Whoosh_TFIDF": [
+            "Realme",
+            "Xiaomi 12",
+            "Xiaomi 12",
+            "Samsung Galaxy Note 10",
+            "Samsung Galaxy Z Fold 2",
+            "Samsung Galaxy A73",
+            "Samsung Galaxy Z Fold 3",
+            "Samsung Galaxy Z Fold 3"
+        ],
+        "Whoosh_Weighted": [
+            "Samsung Galaxy A73",
+            "Realme",
+            "Xiaomi 12",
+            "Xiaomi 12",
+            "Samsung Galaxy Z Fold 3",
+            "Samsung Galaxy Z Fold 3",
+            "Samsung Galaxy Note 10",
+            "Samsung Galaxy Z Fold 2"
+        ]
+    },
+    "UIN7": {
+        "PostgreSQL": [
+            "Samsung Galaxy Note 20"
+        ],
+        "Whoosh_TFIDF": [
+            "Samsung Galaxy Note 20",
+            "Samsung Galaxy Note 20"
+        ],
+        "Whoosh_Weighted": [
+            "Samsung Galaxy Note 20",
+            "Samsung Galaxy Note 20"
+        ]
+    },
+    "UIN8": {
+        "PostgreSQL": [
+            "OnePlus",
+            "OnePlus One"
+        ],
+        "Whoosh_TFIDF": [
+            "OnePlus",
+            "OnePlus",
+            "OnePlus",
+            "OnePlus",
+            "OnePlus",
+            "OnePlus",
+            "OnePlus",
+            "OnePlus",
+            "OnePlus",
+            "OnePlus"
+        ],
+        "Whoosh_Weighted": [
+            "OnePlus One",
+            "OnePlus One",
+            "OnePlus",
+            "OnePlus",
+            "OnePlus",
+            "OnePlus",
+            "OnePlus",
+            "OnePlus",
+            "OnePlus",
+            "OnePlus"
+        ]
+    },
+    "UIN9": {
+        "PostgreSQL": [
+            "IPhone 17 Pro",
+            "IPhone 13 Pro",
+            "IPhone 14 Pro",
+            "IPhone 15 Pro",
+            "IPhone 18 Pro",
+            "IPhone 12 Pro",
+            "IPhone 12 mini",
+            "IPhone 11 Pro",
+            "IPhone 14",
+            "IPhone 16 Pro"
+        ],
+        "Whoosh_TFIDF": [
+            "IPhone 13",
+            "IPhone 13",
+            "Jailbreak (iOS)",
+            "Jailbreak (iOS)",
+            "Jailbreak (iOS)",
+            "IPhone 14",
+            "IPhone 14",
+            "IPhone 13 Pro",
+            "IPhone 13 Pro",
+            "IPhone 12"
+        ],
+        "Whoosh_Weighted": [
+            "IPhone 17 Pro",
+            "IPhone 17 Pro",
+            "IPhone 16 Pro",
+            "IPhone 16 Pro",
+            "IPhone 15 Pro",
+            "IPhone 15 Pro",
+            "IPhone 14 Pro",
+            "IPhone 14 Pro",
+            "IPhone 18 Pro",
+            "IPhone 18 Pro"
+        ]
+    },
+    "UIN10": {
+        "PostgreSQL": [
+            "Xiaomi 12",
+            "Xiaomi"
+        ],
+        "Whoosh_TFIDF": [
+            "Xiaomi 12",
+            "Xiaomi 12",
+            "Xiaomi",
+            "Xiaomi",
+            "Xiaomi",
+            "Xiaomi",
+            "Xiaomi",
+            "Xiaomi",
+            "Xiaomi",
+            "Xiaomi"
+        ],
+        "Whoosh_Weighted": [
+            "Xiaomi",
+            "Xiaomi",
+            "Xiaomi",
+            "Xiaomi",
+            "Xiaomi",
+            "Xiaomi",
+            "Xiaomi",
+            "Xiaomi",
+            "Xiaomi",
+            "Xiaomi"
+        ]
+    }
+}
